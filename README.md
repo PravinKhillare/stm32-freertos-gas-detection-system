@@ -38,6 +38,22 @@ _FreeRTOS Tasks_
 +----------------+   +---------------+   +---------------+
 _Communication via FreeRTOS Queue_
 
+Gas Sensor (MQ2)
+       │
+       ▼
+ADC Conversion
+       │
+       ▼
+FreeRTOS GasTask
+       │
+       ▼
+Queue → System Manager
+       │
+ ┌─────┼──────────────┐
+ ▼     ▼              ▼
+Alarm  GSM SMS       Servo Motors
+                     (Door/Window)
+
 ## Hardware
 
 - STM32F4
